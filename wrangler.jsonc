@@ -1,7 +1,0 @@
-{
-  "name": "itdog",
-  "compatibility_date": "2026-03-19",
-  "assets": {
-    "directory": "./dist"
-  }
-}
