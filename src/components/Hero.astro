@@ -1,0 +1,129 @@
+---
+---
+
+<section class="hero">
+  <div class="hero-content">
+    <h1 class="hero-headline">Empowering SMEs with Smart IT Solutions</h1>
+    <p class="hero-subheadline">
+      From web design to full-stack IT infrastructure — we help small and medium
+      businesses thrive in the digital era.
+    </p>
+    <div class="hero-ctas">
+      <a href="#contact" class="btn-primary">Get Started</a>
+      <a href="#services" class="btn-outline">Our Services</a>
+    </div>
+  </div>
+  <div class="hero-image">
+    <img
+      src="https://images.unsplash.com/photo-1626187853752-898f59dc180e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080"
+      alt="Modern office workspace"
+      loading="eager"
+    />
+  </div>
+</section>
+
+<style>
+  .hero {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    padding: 80px 120px 0;
+    background-color: var(--background);
+  }
+
+  .hero-content {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    max-width: 700px;
+  }
+
+  .hero-headline {
+    font-family: var(--font-primary);
+    font-size: 52px;
+    font-weight: 600;
+    letter-spacing: -2px;
+    line-height: 1.1;
+    color: var(--foreground);
+  }
+
+  .hero-subheadline {
+    font-family: var(--font-secondary);
+    font-size: 18px;
+    line-height: 1.6;
+    color: var(--muted-foreground);
+  }
+
+  .hero-ctas {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+  }
+
+  .btn-primary {
+    font-family: var(--font-primary);
+    font-size: 14px;
+    font-weight: 600;
+    padding: 16px 32px;
+    background-color: var(--primary);
+    color: var(--primary-foreground);
+    border-radius: var(--radius-m);
+    transition: opacity 0.2s;
+  }
+
+  .btn-primary:hover {
+    opacity: 0.9;
+  }
+
+  .btn-outline {
+    font-family: var(--font-primary);
+    font-size: 14px;
+    font-weight: 600;
+    padding: 16px 32px;
+    background-color: var(--background);
+    color: var(--foreground);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-m);
+    transition: background-color 0.2s;
+  }
+
+  .btn-outline:hover {
+    background-color: var(--secondary);
+  }
+
+  .hero-image {
+    width: 100%;
+    border-radius: var(--radius-m);
+    overflow: hidden;
+  }
+
+  .hero-image img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+  }
+
+  @media (max-width: 768px) {
+    .hero {
+      padding: 48px 24px 0;
+    }
+
+    .hero-headline {
+      font-size: 32px;
+      letter-spacing: -1px;
+    }
+
+    .hero-subheadline {
+      font-size: 16px;
+    }
+
+    .hero-image img {
+      height: 300px;
+    }
+
+    .hero-ctas {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+</style>

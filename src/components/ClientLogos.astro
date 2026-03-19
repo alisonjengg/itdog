@@ -1,0 +1,59 @@
+---
+const logos = ['TechCorp', 'Nexus', 'CloudBase', 'DataFlow', 'ServerPro', 'WebSync'];
+---
+
+<section class="client-logos">
+  <p class="logos-label">Trusted by leading companies</p>
+  <div class="logos-row">
+    {logos.map((name) => (
+      <span class="logo-text">{name}</span>
+    ))}
+  </div>
+</section>
+
+<style>
+  .client-logos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    padding: 48px;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .logos-label {
+    font-family: var(--font-secondary);
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    color: var(--muted-foreground);
+  }
+
+  .logos-row {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+  }
+
+  .logo-text {
+    font-family: var(--font-primary);
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--muted-foreground);
+    opacity: 0.5;
+  }
+
+  @media (max-width: 768px) {
+    .client-logos {
+      padding: 32px 24px;
+    }
+
+    .logos-row {
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 24px;
+    }
+  }
+</style>

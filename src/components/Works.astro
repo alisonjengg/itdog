@@ -1,0 +1,176 @@
+---
+const works = [
+  {
+    tag: 'WEB DESIGN',
+    title: 'E-Commerce Platform Redesign',
+    desc: 'Complete redesign of an online retail platform, improving UX and increasing conversion rates by 40%.',
+    image: 'https://images.unsplash.com/photo-1654555023156-0a1c9cdf1130?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080',
+    height: 280,
+  },
+  {
+    tag: 'CLOUD SOLUTIONS',
+    title: 'Cloud Migration for RetailMax',
+    desc: 'Migrated legacy on-premise systems to AWS, reducing operational costs by 60% and improving uptime.',
+    image: 'https://images.unsplash.com/photo-1608657803991-b62ca5de7a12?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080',
+    height: 250,
+  },
+  {
+    tag: 'IT INFRASTRUCTURE',
+    title: 'Network Overhaul for FinServe',
+    desc: 'End-to-end network infrastructure upgrade for a financial services firm, enhancing security and speed.',
+    image: 'https://images.unsplash.com/photo-1742796674961-a5e833a6f0c0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080',
+    height: 280,
+  },
+  {
+    tag: 'DIGITAL STRATEGY',
+    title: 'SaaS Dashboard for GrowthLab',
+    desc: 'Designed and developed a comprehensive analytics dashboard for a SaaS startup, enabling data-driven decisions.',
+    image: 'https://images.unsplash.com/photo-1757882585667-dffbeaaabb81?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080',
+    height: 250,
+  },
+];
+
+const col1 = [works[0], works[1]];
+const col2 = [works[2], works[3]];
+---
+
+<section id="works" class="works">
+  <div class="works-header">
+    <h2 class="works-title">Selected Works</h2>
+    <a href="#" class="works-link">
+      <span>View All Projects</span>
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+    </a>
+  </div>
+  <div class="works-grid">
+    <div class="works-column">
+      {col1.map((work) => (
+        <article class="work-card">
+          <div class="work-image" style={`height: ${work.height}px`}>
+            <img src={work.image} alt={work.title} loading="lazy" />
+          </div>
+          <span class="work-tag">{work.tag}</span>
+          <h3 class="work-title">{work.title}</h3>
+          <p class="work-desc">{work.desc}</p>
+        </article>
+      ))}
+    </div>
+    <div class="works-column">
+      {col2.map((work) => (
+        <article class="work-card">
+          <div class="work-image" style={`height: ${work.height}px`}>
+            <img src={work.image} alt={work.title} loading="lazy" />
+          </div>
+          <span class="work-tag">{work.tag}</span>
+          <h3 class="work-title">{work.title}</h3>
+          <p class="work-desc">{work.desc}</p>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .works {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    padding: 80px 120px;
+  }
+
+  .works-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .works-title {
+    font-family: var(--font-primary);
+    font-size: 36px;
+    font-weight: 600;
+    letter-spacing: -1px;
+    color: var(--foreground);
+  }
+
+  .works-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--font-secondary);
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--muted-foreground);
+    transition: color 0.2s;
+  }
+
+  .works-link:hover {
+    color: var(--foreground);
+  }
+
+  .works-grid {
+    display: flex;
+    gap: 24px;
+  }
+
+  .works-column {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    flex: 1;
+  }
+
+  .work-card {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .work-image {
+    border-radius: var(--radius-m);
+    overflow: hidden;
+  }
+
+  .work-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .work-tag {
+    font-family: var(--font-primary);
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    color: var(--muted-foreground);
+  }
+
+  .work-title {
+    font-family: var(--font-primary);
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--foreground);
+  }
+
+  .work-desc {
+    font-family: var(--font-secondary);
+    font-size: 14px;
+    line-height: 1.5;
+    color: var(--muted-foreground);
+  }
+
+  @media (max-width: 768px) {
+    .works {
+      padding: 48px 24px;
+    }
+
+    .works-grid {
+      flex-direction: column;
+    }
+
+    .works-header {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 16px;
+    }
+  }
+</style>

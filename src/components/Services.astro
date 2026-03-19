@@ -1,0 +1,148 @@
+---
+const services = [
+  {
+    num: '01',
+    title: 'Web Design & Development',
+    desc: 'Creating beautiful, responsive websites that drive results for your business.',
+  },
+  {
+    num: '02',
+    title: 'IT Infrastructure',
+    desc: 'Building robust, scalable IT systems that keep your operations running smoothly.',
+  },
+  {
+    num: '03',
+    title: 'Cloud Solutions',
+    desc: 'Migrating and managing cloud environments for flexibility and growth.',
+  },
+  {
+    num: '04',
+    title: 'Digital Strategy',
+    desc: 'Strategic consulting to align technology with your business objectives.',
+  },
+];
+---
+
+<section id="services" class="services">
+  <div class="services-header">
+    <span class="services-label">Our Services</span>
+    <h2 class="services-title">What We Do</h2>
+  </div>
+  <div class="services-list">
+    <div class="divider"></div>
+    {services.map((service) => (
+      <>
+        <a href="#" class="service-item">
+          <span class="service-num">{service.num}</span>
+          <span class="service-title">{service.title}</span>
+          <span class="service-desc">{service.desc}</span>
+          <svg class="service-arrow" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </a>
+        <div class="divider"></div>
+      </>
+    ))}
+  </div>
+</section>
+
+<style>
+  .services {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    padding: 80px 48px;
+  }
+
+  .services-header {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .services-label {
+    font-family: var(--font-secondary);
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    color: var(--muted-foreground);
+  }
+
+  .services-title {
+    font-family: var(--font-primary);
+    font-size: 36px;
+    font-weight: 600;
+    letter-spacing: -1px;
+    color: var(--foreground);
+  }
+
+  .services-list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .divider {
+    height: 1px;
+    background-color: var(--border);
+    width: 100%;
+  }
+
+  .service-item {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    padding: 24px 0;
+    transition: opacity 0.2s;
+  }
+
+  .service-item:hover {
+    opacity: 0.7;
+  }
+
+  .service-num {
+    font-family: var(--font-primary);
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--muted-foreground);
+  }
+
+  .service-title {
+    font-family: var(--font-primary);
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--foreground);
+    width: 280px;
+    flex-shrink: 0;
+  }
+
+  .service-desc {
+    font-family: var(--font-secondary);
+    font-size: 14px;
+    line-height: 1.5;
+    color: var(--muted-foreground);
+    flex: 1;
+  }
+
+  .service-arrow {
+    color: var(--foreground);
+    flex-shrink: 0;
+  }
+
+  @media (max-width: 768px) {
+    .services {
+      padding: 48px 24px;
+    }
+
+    .service-item {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 8px;
+    }
+
+    .service-title {
+      width: auto;
+    }
+
+    .service-arrow {
+      display: none;
+    }
+  }
+</style>

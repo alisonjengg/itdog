@@ -1,0 +1,97 @@
+---
+const navLinks = [
+  { label: 'Services', href: '#services' },
+  { label: 'Works', href: '#works' },
+  { label: 'About', href: '#about' },
+  { label: 'News', href: '#news' },
+];
+---
+
+<header class="header">
+  <a href="/" class="logo">IT Dog</a>
+  <nav class="nav">
+    {navLinks.map((link) => (
+      <a href={link.href} class="nav-link">{link.label}</a>
+    ))}
+  </nav>
+  <a href="#contact" class="cta-btn">Contact Us</a>
+  <button class="mobile-menu-btn" aria-label="Toggle menu">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+  </button>
+</header>
+
+<style>
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 72px;
+    padding: 0 48px;
+    border-bottom: 1px solid var(--border);
+    background-color: var(--card);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+
+  .logo {
+    font-family: var(--font-primary);
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--foreground);
+  }
+
+  .nav {
+    display: flex;
+    gap: 32px;
+  }
+
+  .nav-link {
+    font-family: var(--font-secondary);
+    font-size: 14px;
+    color: var(--muted-foreground);
+    transition: color 0.2s;
+  }
+
+  .nav-link:hover {
+    color: var(--foreground);
+  }
+
+  .cta-btn {
+    font-family: var(--font-primary);
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--primary-foreground);
+    background-color: var(--primary);
+    padding: 10px 20px;
+    border-radius: var(--radius-m);
+    transition: opacity 0.2s;
+  }
+
+  .cta-btn:hover {
+    opacity: 0.9;
+  }
+
+  .mobile-menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--foreground);
+    cursor: pointer;
+  }
+
+  @media (max-width: 768px) {
+    .header {
+      padding: 0 24px;
+    }
+
+    .nav,
+    .cta-btn {
+      display: none;
+    }
+
+    .mobile-menu-btn {
+      display: block;
+    }
+  }
+</style>

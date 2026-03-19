@@ -1,0 +1,49 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Hero from '../components/Hero.astro';
+import ClientLogos from '../components/ClientLogos.astro';
+import Services from '../components/Services.astro';
+import Works from '../components/Works.astro';
+import About from '../components/About.astro';
+import ContactCTA from '../components/ContactCTA.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="IT Dog — Smart IT Solutions for SMEs">
+  <div class="page">
+    <div class="top-half">
+      <Header />
+      <Hero />
+      <ClientLogos />
+      <Services />
+    </div>
+    <div class="bottom-half">
+      <Works />
+      <About />
+      <ContactCTA />
+      <Footer />
+    </div>
+  </div>
+</Layout>
+
+<style>
+  .page {
+    display: flex;
+    flex-direction: column;
+    max-width: 1440px;
+    margin: 0 auto;
+    background-color: var(--background);
+  }
+
+  .top-half {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--card);
+  }
+
+  .bottom-half {
+    display: flex;
+    flex-direction: column;
+  }
+</style>

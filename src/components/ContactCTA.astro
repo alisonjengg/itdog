@@ -1,0 +1,112 @@
+---
+---
+
+<section id="contact" class="contact-cta">
+  <span class="cta-label">GET IN TOUCH</span>
+  <h2 class="cta-title">Ready to transform<br />your business?</h2>
+  <p class="cta-sub">
+    Let's discuss how IT Dog can help your SME leverage technology for growth.<br />
+    Schedule a free consultation today.
+  </p>
+  <div class="cta-btns">
+    <a href="#" class="cta-primary">
+      <span>Contact Us</span>
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+    </a>
+    <a href="#works" class="cta-secondary">View Our Work</a>
+  </div>
+</section>
+
+<style>
+  .contact-cta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    padding: 100px 120px;
+    background-color: var(--foreground);
+  }
+
+  .cta-label {
+    font-family: var(--font-primary);
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    color: var(--muted-foreground);
+  }
+
+  .cta-title {
+    font-family: var(--font-primary);
+    font-size: 48px;
+    font-weight: 600;
+    letter-spacing: -1.5px;
+    text-align: center;
+    color: var(--background);
+  }
+
+  .cta-sub {
+    font-family: var(--font-secondary);
+    font-size: 18px;
+    line-height: 1.6;
+    text-align: center;
+    color: var(--muted-foreground);
+    max-width: 600px;
+  }
+
+  .cta-btns {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+  }
+
+  .cta-primary {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--font-primary);
+    font-size: 14px;
+    font-weight: 600;
+    padding: 16px 32px;
+    background-color: var(--primary);
+    color: var(--primary-foreground);
+    border-radius: var(--radius-m);
+    transition: opacity 0.2s;
+  }
+
+  .cta-primary:hover {
+    opacity: 0.9;
+  }
+
+  .cta-secondary {
+    font-family: var(--font-primary);
+    font-size: 14px;
+    font-weight: 500;
+    padding: 16px 32px;
+    color: var(--background);
+    border: 1px solid var(--muted-foreground);
+    border-radius: var(--radius-m);
+    transition: opacity 0.2s;
+  }
+
+  .cta-secondary:hover {
+    opacity: 0.8;
+  }
+
+  @media (max-width: 768px) {
+    .contact-cta {
+      padding: 60px 24px;
+    }
+
+    .cta-title {
+      font-size: 32px;
+    }
+
+    .cta-sub {
+      font-size: 16px;
+    }
+
+    .cta-btns {
+      flex-direction: column;
+    }
+  }
+</style>

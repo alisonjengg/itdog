@@ -1,0 +1,103 @@
+---
+---
+
+<section id="about" class="about">
+  <div class="about-left">
+    <span class="about-label">ABOUT US</span>
+    <h2 class="about-title">
+      We believe technology<br />should work for you,<br />not the other way around.
+    </h2>
+    <a href="#" class="about-link">
+      <span>Learn More About IT Dog</span>
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+    </a>
+  </div>
+  <div class="about-right">
+    <p>
+      IT Dog was founded with a simple mission: to make enterprise-grade IT
+      accessible to small and medium businesses. We understand that SMEs need
+      reliable, scalable solutions without the complexity and cost of traditional
+      IT consulting.
+    </p>
+    <p>
+      Our team of experienced engineers and designers work closely with each
+      client to deliver tailored solutions — from beautiful, conversion-focused
+      websites to robust cloud infrastructure that grows with your business.
+    </p>
+  </div>
+</section>
+
+<style>
+  .about {
+    display: flex;
+    gap: 80px;
+    padding: 80px 120px;
+  }
+
+  .about-left {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    flex: 1;
+  }
+
+  .about-label {
+    font-family: var(--font-primary);
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    color: var(--muted-foreground);
+  }
+
+  .about-title {
+    font-family: var(--font-primary);
+    font-size: 32px;
+    font-weight: 600;
+    letter-spacing: -0.5px;
+    line-height: 1.3;
+    color: var(--foreground);
+  }
+
+  .about-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--font-secondary);
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--foreground);
+    padding: 12px 0;
+    transition: opacity 0.2s;
+  }
+
+  .about-link:hover {
+    opacity: 0.7;
+  }
+
+  .about-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 24px;
+    flex: 1;
+  }
+
+  .about-right p {
+    font-family: var(--font-secondary);
+    font-size: 16px;
+    line-height: 1.7;
+    color: var(--muted-foreground);
+  }
+
+  @media (max-width: 768px) {
+    .about {
+      flex-direction: column;
+      gap: 40px;
+      padding: 48px 24px;
+    }
+
+    .about-title {
+      font-size: 24px;
+    }
+  }
+</style>
